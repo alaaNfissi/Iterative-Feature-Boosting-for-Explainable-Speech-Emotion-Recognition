@@ -140,3 +140,77 @@ Install all required dependencies in it:
 ```
   
 </p>
+
+### Reproducing the results
+
+<p align="center">  
+  
+1. First, you need to download TESS datasets:
+  * [TESS official website](https://tspace.library.utoronto.ca/handle/1807/24487)
+  
+2. To be able to explore the data you need to execute the Jupyter notebook that prepares the `csv` files needed for the experiments.
+To do this, you must first start the notebook server by going into the
+repository top level and running:
+```sh 
+    jupyter notebook
+```
+This will start the server and open your default web browser to the Jupyter
+interface. In the page, go into the `Data_exploration` folder and select the
+`data_exploration.ipynb` notebook to view/run. Make sure to specify the correct datasets paths on your own machine as described in the notebook.
+The notebook is divided into cells (some have text while other have code).
+Each cell can be executed using `Shift + Enter`.
+Executing text cells does nothing and executing code cells runs the code
+and produces it's output.
+To execute the whole notebook, run all cells in order.
+ 
+3. After generating the needed `csv` file `TESS_dataset.csv`, go to your terminal where the `ser-env` environment was
+  activated and go to `SER` folder and run the python script. For example:
+```sh  
+python ser.py
+``` 
+
+</p>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Results
+
+_For more detailed experiments and results you can read the paper._
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- LICENSE -->
+## License
+
+All source code is made available under a BSD 3-clause license. You can freely
+use and modify the code, without warranty, so long as you provide attribution
+to the authors. See `LICENSE.md` for the full license text.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Alaa Nfissi - [@LinkedIn](https://www.linkedin.com/in/alaa-nfissi/) - alaa.nfissi@mail.concordia.ca
+
+Github Link: [https://github.com/alaaNfissi/Exploring-the-Power-of-PCA-and-Machine-Learning-for-Speech-Emotion-Recognition-with-a-Focus-on-XAI](https://github.com/alaaNfissi/Exploring-the-Power-of-PCA-and-Machine-Learning-for-Speech-Emotion-Recognition-with-a-Focus-on-XAI)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
