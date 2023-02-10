@@ -8,7 +8,7 @@
    <img src="images/logo.png" alt="Logo" width="80" height="80">
  </a>
 
- <h3 align="center">Exploiting CNNs and GRUs for efficient end-to-end speech emotion recognition approach from raw waveform signal</h3>
+ <h3 align="center">Exploring the Power of PCA and Machine Learning for Speech Emotion Recognition with a Focus on Explainable AI</h3>
 
  <p align="center">
    This paper has been submitted for publication in Canadian Conference on Artificial Intelligence (CANAI).
