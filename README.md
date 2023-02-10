@@ -66,7 +66,7 @@
   
 ![model-architecture][model-architecture]
   
-*Proposed model architecture*
+*Proposed method diagram*
   
 </div>
 
