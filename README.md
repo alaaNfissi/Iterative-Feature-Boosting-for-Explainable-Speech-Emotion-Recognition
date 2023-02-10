@@ -77,7 +77,6 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 ### Built With
 * ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 * ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
@@ -88,3 +87,12 @@
 * ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+## Getting Started
+<p align="justify">
+We first unify sampling rate of the audio data to 16 KHz and using a mono-channel format. This ensures that the audio signals could be properly processed and analyzed by our system.
+After going through the PCA-driven feature extraction and selection process, we use stratified random sampling to divide both the original dataset and the constructed dataset into three homogeneous groups, or "strata": training, validation, and testing. We hold back 10% of the data as unseen data to be used later for testing, 70% of the remaining data for training, and 30% for validation. This approach ensures that the distribution of classes is maintained across all datasets. Then, we use 10-fold cross-validation to train 14 machine learning models on each dataset to select the optimal one. By using cross-validation, we can obtain an estimate of the performance of the models that is less sensitive to the particular random partition of the data. Thus, we are able to better compare the contribution of the data selection technique of the most informative features and how much the performance improves.
+In order to improve the performance of our best-performing machine learning model, we use the technique called grid search technique. This involves exhaustively searching through a specified parameter space to find the best combination of hyperparameters for a given model. In this way, we are able to fine-tune the model by adjusting its hyperparameters and making it more robust. The goal of this process is to find the optimal set of hyperparameters that produces the highest performance on the validation dataset.
+After the grid search process is finished, we assess the performance of the final model by applying it to the 10% of the dataset that was set aside at the beginning of the experiment. This portion of the data serves as a test set to evaluate the model's ability to generalize to unseen data and estimate its generalization error. The testing performance is an indicator of how well the model would perform on new, unseen data. By using this method, we were able to ensure that our model is not overfitting to the training data. Finally, we use the SHAP approach for the explainable artificial intelligence module to evaluate the feature importance in the predictions made by our optimal model. This allows us to investigate how the model is making its predictions and identify which features are most important for determining the emotion. The metrics we use to evaluate our work are accuracy, recall, precision, and F1-Score.  
+</p>
