@@ -1,4 +1,3 @@
-```
 <a name="readme-top"></a>
 
 <!-- PROJECT LOGO -->
@@ -33,4 +32,3 @@
    <a href="https://github.com/alaaNfissi/Exploring-the-Power-of-PCA-and-Machine-Learning-for-Speech-Emotion-Recognition-with-a-Focus-on-XAI/issues">Request Feature</a>
  </p>
 </div>
-```
