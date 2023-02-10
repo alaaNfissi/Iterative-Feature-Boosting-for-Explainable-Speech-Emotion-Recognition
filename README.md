@@ -82,6 +82,7 @@
 * ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
 * ![PyCaret](https://img.shields.io/badge/PyCaret-%23036CFF.svg?style=for-the-badge&logo=PyCaret&logoColor=white)
 * ![Kaldi](https://img.shields.io/badge/Kaldi-%232465A0.svg?style=for-the-badge&logo=Kaldi&logoColor=white)
+* ![SHAP](https://img.shields.io/badge/SHAP-%23006400.svg?style=for-the-badge&logo=SHAP&logoColor=white)
 * ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
 * ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 * ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
@@ -96,3 +97,12 @@ After going through the PCA-driven feature extraction and selection process, we 
 In order to improve the performance of our best-performing machine learning model, we use the technique called grid search technique. This involves exhaustively searching through a specified parameter space to find the best combination of hyperparameters for a given model. In this way, we are able to fine-tune the model by adjusting its hyperparameters and making it more robust. The goal of this process is to find the optimal set of hyperparameters that produces the highest performance on the validation dataset.
 After the grid search process is finished, we assess the performance of the final model by applying it to the 10% of the dataset that was set aside at the beginning of the experiment. This portion of the data serves as a test set to evaluate the model's ability to generalize to unseen data and estimate its generalization error. The testing performance is an indicator of how well the model would perform on new, unseen data. By using this method, we were able to ensure that our model is not overfitting to the training data. Finally, we use the SHAP approach for the explainable artificial intelligence module to evaluate the feature importance in the predictions made by our optimal model. This allows us to investigate how the model is making its predictions and identify which features are most important for determining the emotion. The metrics we use to evaluate our work are accuracy, recall, precision, and F1-Score.  
 </p>
+
+### Getting the code
+
+You can download a copy of all the files in this repository by cloning the
+[git](https://git-scm.com/) repository:
+
+    git clone https://github.com/alaaNfissi/Exploring-the-Power-of-PCA-and-Machine-Learning-for-Speech-Emotion-Recognition-with-a-Focus-on-XAI.git
+
+or [download a zip archive](https://github.com/alaaNfissi/Exploring-the-Power-of-PCA-and-Machine-Learning-for-Speech-Emotion-Recognition-with-a-Focus-on-XAI/archive/refs/heads/main.zip).
