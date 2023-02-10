@@ -106,3 +106,37 @@ You can download a copy of all the files in this repository by cloning the
     git clone https://github.com/alaaNfissi/Exploring-the-Power-of-PCA-and-Machine-Learning-for-Speech-Emotion-Recognition-with-a-Focus-on-XAI.git
 
 or [download a zip archive](https://github.com/alaaNfissi/Exploring-the-Power-of-PCA-and-Machine-Learning-for-Speech-Emotion-Recognition-with-a-Focus-on-XAI/archive/refs/heads/main.zip).
+
+### Dependencies
+
+<p align="center">
+
+You'll need a working Python environment to run the code.
+The recommended way to set up your environment is through the
+[Anaconda Python distribution](https://www.anaconda.com/download/) which
+provides the `conda` package manager.
+Anaconda can be installed in your user directory and does not interfere with
+the system Python installation.
+The required dependencies are specified in the file `requirements.txt`.
+We use `conda` virtual environments to manage the project dependencies in
+isolation.
+Thus, you can install our dependencies without causing conflicts with your
+setup (even with different Python versions).
+Run the following command to create an `ser-env` environment to create a separate environment:
+```sh 
+    conda create --name ser-env
+```
+Activate the environment, this will enable the it for your current terminal session. Any subsequent commands will use software that is installed in the environment:
+```sh 
+    conda activate ser-env
+ ``` 
+Use Pip to install packages to Anaconda Environment:
+```sh 
+    conda install pip
+```
+Install all required dependencies in it:
+```sh
+    pip install -r requirements.txt
+```
+  
+</p>
