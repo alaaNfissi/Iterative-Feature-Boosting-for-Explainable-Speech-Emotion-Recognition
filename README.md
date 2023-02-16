@@ -4,7 +4,7 @@
 <br />
 
 <div align="center">
- <a href="https://github.com/alaaNfissi/Exploring-the-Power-of-PCA-and-Machine-Learning-for-Speech-Emotion-Recognition-with-a-Focus-on-XAI">
+ <a href="https://anonymous.4open.science/r/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition-0C88">
    <img src="images/logo.png" alt="Logo" width="80" height="80">
  </a>
 
@@ -14,22 +14,22 @@
    This paper has been submitted for publication in Canadian Conference on Artificial Intelligence (CANAI).
    <br />
   </p>
-  <!-- <a href="https://github.com/alaaNfissi/Exploring-the-Power-of-PCA-and-Machine-Learning-for-Speech-Emotion-Recognition-with-a-Focus-on-XAI"><strong>Explore the docs »</strong></a> -->
+  <!-- <a href="https://anonymous.4open.science/r/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition-0C88"><strong>Explore the docs »</strong></a> -->
 </div>  
 
  
 <div align="center">
 
-[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](https://github.com/alaaNfissi/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition/#readme "Go to project documentation")
+[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](https://anonymous.4open.science/r/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition-0C88/#readme "Go to project documentation")
 
 </div>  
 
 <div align="center">
    <p align="center">
    ·
-   <a href="https://github.com/alaaNfissi/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition/issues">Report Bug</a>
+   <a href="https://anonymous.4open.science/r/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition-0C88/issues">Report Bug</a>
    ·
-   <a href="https://github.com/alaaNfissi/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition/issues">Request Feature</a>
+   <a href="https://anonymous.4open.science/r/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition-0C88/issues">Request Feature</a>
  </p>
 </div>
 <!-- TABLE OF CONTENTS -->
@@ -103,9 +103,9 @@ After the grid search process is finished, we assess the performance of the fina
 You can download a copy of all the files in this repository by cloning the
 [git](https://git-scm.com/) repository:
 
-    git clone https://github.com/alaaNfissi/Exploring-the-Power-of-PCA-and-Machine-Learning-for-Speech-Emotion-Recognition-with-a-Focus-on-XAI.git
+    git clone https://anonymous.4open.science/r/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition-0C88.git
 
-or [download a zip archive](https://github.com/alaaNfissi/Exploring-the-Power-of-PCA-and-Machine-Learning-for-Speech-Emotion-Recognition-with-a-Focus-on-XAI/archive/refs/heads/main.zip).
+or [download a zip archive](https://anonymous.4open.science/r/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition-0C88/archive/refs/heads/main.zip).
 
 ### Dependencies
 
@@ -217,16 +217,5 @@ Don't forget to give the project a star! Thanks again!
 All source code is made available under a BSD 3-clause license. You can freely
 use and modify the code, without warranty, so long as you provide attribution
 to the authors. See `LICENSE` for the full license text.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Alaa Nfissi - [@LinkedIn](https://www.linkedin.com/in/alaa-nfissi/) - alaa.nfissi@mail.concordia.ca
-
-Github Link: [https://github.com/alaaNfissi/Exploring-the-Power-of-PCA-and-Machine-Learning-for-Speech-Emotion-Recognition-with-a-Focus-on-XAI](https://github.com/alaaNfissi/Exploring-the-Power-of-PCA-and-Machine-Learning-for-Speech-Emotion-Recognition-with-a-Focus-on-XAI)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
