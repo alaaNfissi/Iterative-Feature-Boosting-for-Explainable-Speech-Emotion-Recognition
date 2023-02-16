@@ -20,18 +20,10 @@
  
 <div align="center">
 
-[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](https://anonymous.4open.science/r/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition-0C88/#readme "Go to project documentation")
+[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](https://anonymous.4open.science/r/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition-0C88/README.md "Go to project documentation")
 
 </div>  
 
-<div align="center">
-   <p align="center">
-   ·
-   <a href="https://anonymous.4open.science/r/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition-0C88/issues">Report Bug</a>
-   ·
-   <a href="https://anonymous.4open.science/r/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition-0C88/issues">Request Feature</a>
- </p>
-</div>
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
