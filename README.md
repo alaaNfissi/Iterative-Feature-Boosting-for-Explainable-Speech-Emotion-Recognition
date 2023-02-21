@@ -171,10 +171,11 @@ A comparison of the performance of several machine learning models was conducted
 
 </p>
 
-Confusion matrix          |  Decision bounderies
-:-----------------------------------------------------------------:|:-----------------------------:
-![confusion_matrix](images/confusion_matrix.png)  |  ![decision_bounderies](images/decision_bounderies.png)
+Confusion matrix          
+:-----------------------------------------------------------------:
+![confusion_matrix](images/confusion_matrix.png) 
 
+ 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="center">
