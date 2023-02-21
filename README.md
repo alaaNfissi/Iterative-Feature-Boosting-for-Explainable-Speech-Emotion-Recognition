@@ -167,7 +167,7 @@ python ser.py
 ### On TESS dataset
 <p align="center"> 
   
-A comparison of the performance of several machine learning models was conducted using a dataset that underwent PCA-driven feature engineering and the incorporation of an XAI feedback loop. The best-performing model was the Extra Trees (ET) classifier, which achieved an accuracy of 99.4% and F1-score of 99.4%. The second best-performing model was Light GBM with an accuracy and F1-score of 99%. The results of the Extra Trees classifier were evaluated through a confusion matrix, which showed that it performed well overall, with a high number of correct predictions for each emotion. The decision boundaries of the Extra Trees classifier were able to accurately separate emotions, demonstrating the effectiveness of the approach in improving the performance of the model on the Speech Emotion Recognition (SER) task.
+A comparison of the performance of several machine learning models was conducted using a dataset that underwent PCA-driven feature engineering and the incorporation of an XAI feedback loop. The best-performing model was the Extra Trees (ET) classifier, which achieved an accuracy of 99.4% and F1-score of 99.4%. The second best-performing model was Light GBM with an accuracy and F1-score of 99%. The results of the Extra Trees classifier were evaluated through a confusion matrix, which showed that it performed well overall, with a high number of correct predictions for each emotion.
 
 </p>
 
