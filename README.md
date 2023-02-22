@@ -81,7 +81,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
+<!-- GETTING STARTED! -->
 ## Getting Started
 <p align="justify">
 We first set the sampling rate of the audio data to 16 KHz using a mono-channel format. This ensures that audio signals are properly processed and analyzed by our system, as most SER algorithms require specific sampling rates and number of channels for each audio signal. After going through the PCA-driven feature extraction and selection process, we use stratified random sampling to divide both original dataset and boosted features dataset into three homogeneous groups (or strata): training, validation, and testing. We keep 10% of the data as unseen to be used for testing, 80% for training, and 10% for validation. This ensures that the distribution of classes is maintained across all subsets. Then, we use 10- fold cross-validation to train M = 14 machine learning models: Extra Trees (et), Light Gradient Boosting Machine (lightgbm), Random Forest (rf), Quadratic Discriminant Analysis (qda), Gradient Boosting Classifier (gbc), Linear Discriminant Analysis (lda), Decision Tree (dt), Ridge (ridge), Adaptive Boosting (ada), Naive Bayes (nb), K-Nearest Neighbors (knn), Dummy classifier (dummy), Logistic Regression (lr), and Support Vector Machine (svm), on both datasets to select the optimal model for each. By using cross-validation, our performance evaluation should be less sensitive to random partitioning of data. In order to improve the performance of our best-performing machine learning models, we use the grid search technique, which involves exhaustively searching through a specified parameter space to find the best combination of hyperparameters for a given model.
