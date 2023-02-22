@@ -282,7 +282,7 @@ most_important_names_list = list(df_original.drop(columns=['class']).columns.uni
 flag = True
 while flag:
     df = df_original[most_important_names_list+['class']]
-    saved_cols, pot_cols_list, saved_explained_variances = select_feature_combinations(df, 100000)
+    saved_cols, pot_cols_list, saved_explained_variances = select_feature_combinations(df, 10000)
     print(f'saved_cols: {len(saved_cols)}')
     boosted_dataset = boosted_dataset_construction(saved_cols, df)
 
@@ -294,6 +294,7 @@ while flag:
     data = X
     data['class']= boosted_dataset['class']
     #Classification
+    from pycaret.classification import *
     clf = setup(data=data, target='class', train_size=0.7, session_id=123, data_split_stratify=True, silent=True)
     best_model = compare_models(include=['dt','rf','et','ada','lightgbm'])
     best_model_tuned = tune_model(best_model)
