@@ -6,7 +6,6 @@ import pandas as pd
 plt.rcParams['figure.figsize'] = (21,15)
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
-
 import os
 from tqdm.notebook import tqdm
 import parselmouth
@@ -15,6 +14,7 @@ import librosa.display
 import scipy
 import random
 import shap
+from utils import *
 random.seed(123)
 
 dataset_name = 'tess'
@@ -235,7 +235,7 @@ print('Data for Modeling: ' + str(data.shape))
 print('Unseen Data For Predictions: ' + str(data_unseen.shape))
 
 from pycaret.classification import *
-clf = setup(data=data, target='class', train_size=0.7, session_id=123, data_split_stratify=True)
+clf = setup(data=data, target='class', train_size=0.7, session_id=123, data_split_stratify=True, silent=True)
 
 #Comparing All Models
 
@@ -265,5 +265,67 @@ shap.summary_plot(shap_values[1], X)
 interpret_model(tuned_et_pca, plot='reason', observation=12)
 
 interpret_model(tuned_et_pca, plot='reason')
+
+
+dataset_name = 'comb'
+df = pd.read_csv(f'all_handcrafted_data_{dataset_name}.csv')
+df = df[df['source'] == 'TESS']
+df.drop(columns=['source', 'path'],inplace=True)
+df.dropna(inplace=True)
+df = df.loc[:,~df.columns.duplicated()].copy()
+df = df.replace(np.nan, 0)
+
+df_original = df.loc[:,~df.apply(lambda x: x.duplicated(),axis=1).all()].copy()
+
+most_important_names_list = list(df_original.drop(columns=['class']).columns.unique())
+
+flag = True
+while flag:
+    df = df_original[most_important_names_list+['class']]
+    saved_cols, pot_cols_list, saved_explained_variances = select_feature_combinations(df, 100000)
+    print(f'saved_cols: {len(saved_cols)}')
+    boosted_dataset = boosted_dataset_construction(saved_cols, df)
+
+    X = boosted_dataset.drop(columns=['class'])
+    Xs = StandardScaler().fit_transform(X)
+    Xcols = X.columns
+    X = pd.DataFrame(Xs)
+    X.columns = Xcols
+    data = X
+    data['class']= boosted_dataset['class']
+    #Classification
+    clf = setup(data=data, target='class', train_size=0.7, session_id=123, data_split_stratify=True, silent=True)
+    best_model = compare_models(include=['dt','rf','et','ada','lightgbm'])
+    best_model_tuned = tune_model(best_model)
+
+    explainer = shap.TreeExplainer(best_model_tuned)
+    X = boosted_dataset.drop('class', axis=1)
+    shap_values = explainer.shap_values(X)
+    vals= np.abs(shap_values).mean(0)
+    feature_importance = pd.DataFrame(list(zip(X.columns,sum(vals))),columns=['col_name','feature_importance_vals'])
+    feature_importance = feature_importance.sort_values(by=['feature_importance_vals'],ascending=False).reset_index()
+
+    most_important_names_list = []
+    for i in tqdm(range(len(feature_importance))):
+        if feature_importance['feature_importance_vals'][i] > 0:
+            comb_index = feature_importance['col_name'][i].split('_')[1]
+            corresponding_data_combination = df_original[saved_cols[int(comb_index)]]
+            model = PCA(n_components=2).fit(corresponding_data_combination)
+            X_pc = model.transform(corresponding_data_combination)
+            n_pcs= model.components_.shape[0]
+            most_important = [np.argsort(np.abs(model.components_[j]))[-3:] for j in range(n_pcs)]
+            initial_feature_names = corresponding_data_combination.columns
+            most_important_names = [initial_feature_names[most_important[j]] for j in range(n_pcs)]
+            dic = {'PC_{}'.format(j+1): most_important_names[j] for j in range(n_pcs)}
+            # build the dataframe
+            df_important_features = pd.DataFrame(dic.items())
+            print(df_important_features)
+            most_important_names_list+= most_important_names
+            #print(df_important_features)
+    #print(len(set(most_important_names_list)))
+    most_important_names_list = list(set(flatten(most_important_names_list)))
+    print(most_important_names_list)
+    if len(most_important_names_list) <= 10:
+        flag = False
 
 print('Done!')
