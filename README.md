@@ -11,7 +11,7 @@
  <h3 align="center">Iterative Feature Boosting for Explainable Speech Emotion Recognition</h3>
 
  <p align="center">
-   This paper has been submitted for publication in Canadian Conference on Artificial Intelligence (CANAI).
+   This paper has been submitted for publication in International Conference on Machine Learning and Applications (ICMLA).
    <br />
   </p>
   <!-- <a href="https://anonymous.4open.science/r/Iterative-Feature-Boosting-for-Explainable-Speech-Emotion-Recognition-0C88"><strong>Explore the docs »</strong></a> -->
