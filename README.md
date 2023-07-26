@@ -173,7 +173,7 @@ A comparison of the performance of several machine learning models was conducted
 
 Confusion matrix          
 :-----------------------------------------------------------------:
-![confusion_matrix](images/confusion_matrix.png) 
+![confusion_matrix](images/CM_for_boosted.png) 
 
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
