@@ -82,7 +82,6 @@ for pot_cols in tqdm(saved_cols):
     X.columns = Xcols
     pca = PCA()
     Z = pca.fit_transform(X)
-    Z = pca.inverse_transform(Z)
     dic_pca.update({f'PC_{saved_cols.index(pot_cols)}_1':Z[:,0], f'PC_{saved_cols.index(pot_cols)}_2':Z[:,1]})
 data_pca = pd.DataFrame(dic_pca)
 
